@@ -1,0 +1,108 @@
+[
+    {
+        "name" : "power_plant_base_coal",
+        "category" : "power_plant_base",
+        "tileset_coord" : 21,
+        "display_name" : "Coal Power Plant Base",
+        "prerequisites" : ["buildable", "no_adjacent_entities"],
+        "default_cost" : 100,
+        "description" : "Some generic description",
+        "technology" : "coal",
+        "max_units" : 6,
+        "max_elements" : 10
+    },
+    {
+        "name" : "power_plant_depot_coal",
+        "category" : "power_plant_generic_element",
+        "tileset_coord" : 23,
+        "display_name" : "Coal Depot",
+        "prerequisites" : ["buildable", "adjacent_entity", "same_technology", "adjacent_grid_node"],
+        "default_cost" : 200,
+        "description" : "Some generic description",
+        "technology" : "coal",
+        "property_name" : "coal_inflow",
+        "property_value" : 100.0
+    },
+    {
+        "name" : "power_plant_unit_coal",
+        "category" : "power_plant_unit",
+        "tileset_coord" : 22,
+        "display_name" : "Coal Power Plant Unit",
+        "prerequisites" : ["buildable", "adjacent_entity", "same_technology", "adjacent_grid_node"],
+        "default_cost" : 500,
+        "description" : "Some generic description",
+        "technology" : "coal",
+        "power_generation" : 220.0,
+        "power_efficiency" : 0.3,
+        "heat_efficiency" : 0.5,
+        "cost_of_operation" : 30.0,
+        "fail_rate" : 0.005
+    },
+    {
+        "name" : "power_plant_administration_buliding",
+        "category" : "power_plant_generic_element",
+        "tileset_coord" : 23,
+        "display_name" : "Administration Building",
+        "prerequisites" : ["buildable", "adjacent_entity", "adjacent_grid_node"],
+        "default_cost" : 100,
+        "description" : "Some generic description",
+        "technology" : "universal",
+        "property_name" : "administration",
+        "property_value" : 20.0
+    },
+    {
+        "name" : "power_plant_cooling_tower",
+        "category" : "power_plant_generic_element",
+        "tileset_coord" : 23,
+        "display_name" : "Cooling Tower",
+        "prerequisites" : ["buildable", "adjacent_entity", "adjacent_grid_node"],
+        "default_cost" : 50,
+        "description" : "Some generic description",
+        "technology" : "universal",
+        "property_name" : "cooling",
+        "property_value" : 100.0
+    },
+    {
+        "name" : "power_plant_vent_stack",
+        "category" : "power_plant_generic_element",
+        "tileset_coord" : 23,
+        "display_name" : "Vent Stack",
+        "prerequisites" : ["buildable", "adjacent_entity", "adjacent_grid_node"],
+        "default_cost" : 50,
+        "description" : "Some generic description",
+        "technology" : "universal",
+        "property_name" : "venting",
+        "property_value" : 100.0
+    },
+    {
+        "name" : "substation",
+        "category" : "buildable_object",
+        "display_name" : "Substation",
+        "tileset_coord" : 25,
+        "prerequisites" : ["buildable", "no_adjacent_entities"],
+        "default_cost" : 50,
+        "description" : "Some generic description"
+    },
+    {
+        "name" : "line",
+        "category" : "transmission_line",
+        "tileset_coord" : 24,
+        "display_name" : "Basic HV Transmission Line",
+        "prerequisites" : ["buildable", "adjacent_entity", "adjacent_grid_node"],
+        "default_cost" : 10,
+        "description" : "Some generic description",
+        "proper_admittance" : "0.01+0.004j",
+        "max_length" : 5
+    },
+    {
+        "name" : "city_0",
+        "category" : "generic_consumer",
+        "display_name" : "City Block",
+        "tileset_coord" : 1,
+        "min_consumption" : 300.0,
+        "max_consumption" : 1000.0,
+        "time_variance" : 0.3,
+        "corr_day_length" : -0.1,
+        "corr_temperature" : 0.2
+    }
+]
