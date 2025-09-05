@@ -10,9 +10,10 @@ from src.gameobjects.enums import *
 
 import json
 from copy import deepcopy
+from pathlib import Path
 
 class TileObjectDB():
-    def __init__(self, path : str):
+    def __init__(self, path : Path):
         # Read object from json using custom decoder
         self.__data : dict[str, TileObjectBase] = dict()
         temp_data = None

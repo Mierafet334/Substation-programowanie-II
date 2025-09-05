@@ -1,8 +1,9 @@
 from OpenGL.GL import *
 from pyglm import glm
+from pathlib import Path
 
 class ShaderProgram():
-    def __init__(self, vertex_path, geometry_path, fragment_path):
+    def __init__(self, vertex_path : Path, geometry_path : Path, fragment_path : Path):
         # Open and compile shaders
         with open(vertex_path, 'r') as file:
             vertex_code = file.readlines()

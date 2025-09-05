@@ -16,6 +16,7 @@ from src.config import Config
 from src.gameobjects.enums import *
 
 from typing import Tuple, List
+from pathlib import Path
 import numpy as np
 
 WorldCoord = Tuple[int, int, int, int]
@@ -42,7 +43,7 @@ class WorldManager():
         self.__object_counters : dict = {"power_plant" : 0, "transmission_line" : 0, "substation" : 0}
     
     @classmethod
-    def from_map_file(cls, path):
+    def from_map_file(cls, path : Path):
         return cls(WorldMap(path))
     
     @property

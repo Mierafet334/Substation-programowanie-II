@@ -11,15 +11,18 @@ from src.gameobjects.tile_object_db import TileObjectDB
 from src.gamestates import *
 from src.config import Config
 
+from pathlib import Path
+
 class Game():
     def __init__(self):
         pygame.init()
         self.size = 800, 600
 
         pygame.display.set_mode(self.size, pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
+        pygame.display.set_caption("Substation")
 
-        self.world = WorldManager.from_map_file("./resources/test_map.json")
-        self.tile_db = TileObjectDB("./src/tiles_db.json")
+        self.world = WorldManager.from_map_file(Path("./resources/test_map.json"))
+        self.tile_db = TileObjectDB(Path("./src/tiles_db.json"))
 
         self.clock = pygame.time.Clock()
         self.view = View(self.size[0], self.size[1], self.world.get_world_bounds())
@@ -29,8 +32,8 @@ class Game():
         self.delta = 0.0 # Delta time for updates
 
         # Shader loading and compilation
-        self.map_shader = ShaderProgram("./src/shaders/vertex.glsl", "./src/shaders/geometry.glsl", "./src/shaders/fragment.glsl")
-        self.material = Tileset("./src/textures/substation_tileset.png")
+        self.map_shader = ShaderProgram(Path("./src/shaders/vertex.glsl"), Path("./src/shaders/geometry.glsl"), Path("./src/shaders/fragment.glsl"))
+        self.material = Tileset(Path("./src/textures/substation_tileset.png"))
 
     def run(self):
         while True:

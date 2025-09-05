@@ -1,8 +1,9 @@
 from OpenGL.GL import *
 import pygame
+from pathlib import Path
 
 class Tileset():
-    def __init__(self, filepath):
+    def __init__(self, filepath : Path):
         self.texture = glGenTextures(1)
         glBindTexture(GL_TEXTURE_2D, self.texture)
         glTexParameter(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT)
