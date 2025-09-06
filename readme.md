@@ -10,3 +10,11 @@ Zależności zewnętrzne projektu są w pliku `requirements.txt` w formacie zgod
 
 > [!NOTE]
 > Przy pierwszym uruchomieniu środowisko pygame może się chwilę wczytywać.
+
+### Zrzuty ekranu
+<img width="797" height="625" alt="image" src="https://github.com/user-attachments/assets/29d078c8-ee7d-4855-983a-d1a26f748209" />
+
+<img width="794" height="624" alt="image" src="https://github.com/user-attachments/assets/81ccccbe-04ba-4559-8dd1-8976c27bbe48" />
+
+
+
