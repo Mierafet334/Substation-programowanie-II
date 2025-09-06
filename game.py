@@ -1,6 +1,8 @@
 from OpenGL.GL import *
 import pygame
 import sys
+from pathlib import Path
+import os
 
 from src.render.shader_program import ShaderProgram
 from src.render.tileset import Tileset
@@ -11,11 +13,10 @@ from src.gameobjects.tile_object_db import TileObjectDB
 from src.gamestates import *
 from src.config import Config
 
-from pathlib import Path
-
 class Game():
     def __init__(self):
         pygame.init()
+        os.environ["SDL_VIDEO_X11_FORCE_EGL"] = "1" # Linux OpenGL context fix
         self.size = 800, 600
 
         pygame.display.set_mode(self.size, pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
